@@ -32,12 +32,12 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Подбор программы</h1>
+      <h1 class="title">Подбор программы</h1>
 
-      <p class="page-main__annotation">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <p class="annotation">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
-      <form class="page-main__form select-program" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="select-program__info info">
+      <form class="form-selection" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form-selection__info info">
           <label class="info__label" for="name-field">Имя:*</label>
           <input class="info__input" id="name-field" type="text" name="name" placeholder="Барсик" required>
           <label class="info__label" for="weight-field">Вес (кг):*</label>
@@ -46,7 +46,7 @@
           <input class="info__input" id="age-field" type="number" name="age" placeholder="7">
         </fieldset>
 
-        <fieldset class="select-program__feeding feeding">
+        <fieldset class="form-selection__feeding feeding">
           <input class="visually-hidden" id="feeding1" type="radio" name="feeding" value="Похудение" checked>
           <label class="feeding__label" for="feeding1">Похудение</label>
           <input class="visually-hidden" id="feeding2" type="radio" name="feeding" value="Набор массы">
@@ -55,7 +55,7 @@
           <label class="feeding__label" for="feeding3">Не знаю (нужен ваш совет)</label>
         </fieldset>
 
-        <fieldset class="select-program__details details">
+        <fieldset class="form-selection__details details">
           <legend class="details__title">Контактные данные (владельца кота)</legend>
 
           <label class="details__label" for="email-field">E-mail:*</label>
@@ -64,14 +64,14 @@
           <input class="details__input" type="tel" id="phone-field" name="phone" placeholder="8 (960) 900-60-90" required>
         </fieldset>
 
-        <fieldset class="select-program__comments comments">
+        <fieldset class="form-selection__comments comments">
           <legend class="comments__title">
             <label for="textarea-field">Комментарий</label>
           </legend>
 
           <textarea class="comments__textarea" id="textarea-field" name="textarea" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="select-program__extra extra">
+        <fieldset class="form-selection__extra extra">
           <legend class="extra__title">Дополнительно</legend>
 
           <input class="visually-hidden" id="ingredient1" type="checkbox" name="ingredient" value="Сахарозаменитель" checked>
@@ -84,9 +84,9 @@
           <label class="extra__label" for="ingredient4">Витамины</label>
         </fieldset>
 
-        <button class="select-program__button button" type="submit">Отправить заявку</button>
+        <button class="form-selection__button button" type="submit">Отправить заявку</button>
 
-        <small class="select-program__legend">
+        <small class="form-selection__legend">
           <sup>*</sup> — Обязательные поля
         </small>
       </form>
