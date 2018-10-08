@@ -4,29 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи. Каталог продукции</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="header">
-    <a class="logo" href="index.html">
-      <img class="logo__image" src="http://placehold.it/33x38" width="33" height="38" alt="Cat Energy">
-    </a>
-    <a class="logo" href="index.html">
-      <img class="logo__header" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
-    </a>
+    <div class="logo">
+      <a class="logo__link">
+        <img class="logo__image" src="img/logo-mobile.svg" width="192" height="38" alt="Cat Energy">
+      </a>
+      <button class="logo__toggle" type="button">Открыть меню</button>
+    </div>
+
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item main-nav__item--active">
-          <a>Каталог продукции</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -279,20 +281,23 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__contacts footer__contacts--bg-grey">
+    <div class="footer__contacts">
       <h2 class="footer__cooperation">Приглашаем к сотрудничеству дилеров!</h2>
       <p class="footer__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276"
-        width="320" height="362" style="border:0;" allowfullscreen></iframe>
     </div>
-    <a class="logo">
-      <img class="logo--footer" src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">
+
+    <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276" width="320" height="362" allowfullscreen></iframe>
+
+    <a class="logo__link">
+      <img class="logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
     </a>
+
     <div class="social">
       <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
       <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
       <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
     </div>
+    
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>

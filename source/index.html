@@ -4,29 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="header">
-    <a class="logo">
-      <img class="logo__image" src="http://placehold.it/33x38" width="33" height="38" alt="Cat Energy">
-    </a>
-    <a class="logo">
-      <img class="logo__header" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
-    </a>
+    <div class="logo">
+      <a class="logo__link">
+        <img class="logo__image" src="img/logo-mobile.svg" width="192" height="38" alt="Cat Energy">
+      </a>
+      <button class="logo__toggle" type="button">Открыть меню</button>
+    </div>
+
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
-          <a>Главная</a>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -38,9 +40,11 @@
     <section class="promo">
       <header class="promo__header">
         <h2 class="promo__title">Функциональное питание для котов</h2>
-        <h3 class="promo__slogan">Занялся собой? Займись котом!</b>
+        <h3 class="promo__slogan">Занялся собой? Займись котом!</h3>
       </header>
-      <a class="button" href="form.html">Подобрать программу</a>
+      <div class="promo__wrapper">
+        <a class="button" href="form.html">Подобрать программу</a>
+      </div>
     </section>
 
     <section class="catalog-category">
@@ -60,7 +64,7 @@
     </section>
 
     <section class="advantages">
-      <h3 class="advantages__title">Как это работает</h3>
+      <h2 class="title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--nutrition">Функциональное питание содержит только полезные питательные вещества.</li>
         <li class="advantages__item advantages__item--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
@@ -70,47 +74,57 @@
     </section>
 
     <section class="example">
-      <h3 class="example__title">Живой пример</h3>
+      <h2 class="title">Живой пример</h2>
 
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-        16 часов в день.</p>
+      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-      <dl class="example__result">
-        <dt class="example__value">5 кг</dt>
-        <dd class="example__characteristic">снижение веса</dd>
-        <dt class="example__value">60 дней</dt>
-        <dd class="example__characteristic">затрачено времени</dd>
-      </dl>
+      <div class="example__result">
+        <dl class="example__item">
+          <dt class="example__value">5 кг</dt>
+          <dd class="example__characteristic">снижение веса</dd>
+        </dl>
+        <dl class="example__item example__item--no-margin">
+          <dt class="example__value">60 дней</dt>
+          <dd class="example__characteristic">затрачено времени</dd>
+        </dl>
+      </div>
 
       <p class="example__costs">Затраты на питание: 15 000 руб.</p>
 
-      <img class="example__image-before" src="http://placehold.it/311x232" width="311" height="232" alt="Фотография кота до смены питания">
-      <img class="example__image-after" src="http://placehold.it/251x240" width="251" height="240" alt="Фотография кота после смены питания">
+      <input class="visually-hidden example__was" id="was" name="switcher" type="radio" checked>
+      <input class="visually-hidden example__now" id="now" name="switcher" type="radio">
 
-      <div class="example__changes">
-        <span class="example__label">Было</span>
+      <div class="example__controls">
+        <label class="example__label" for="was">Было</label>
         <div class="example__switcher"></div>
-        <span class="example__label">Стало</span>
+        <label class="example__label" for="now">Стало</label>
+      </div>
+
+      <div class="example__image">
+        <img class="example__image-before" src="img/before-mobile@1x.png" width="311" height="232" alt="Фотография кота до смены питания">
+        <img class="example__image-after" src="img/after-mobile@1x.png" width="251" height="240" alt="Фотография кота после смены питания">
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__contacts">
+    <div class="footer__contacts footer__contacts--bg-white">
       <h2 class="footer__cooperation">Приглашаем к сотрудничеству дилеров!</h2>
-      <p class="footer__address">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276"
-        width="320" height="362" style="border:0;" allowfullscreen></iframe>
+      <p class="footer__address">ул. Большая Конюшенная, д.&nbsp;19/8<br>Санкт-Петербург</p>
     </div>
-    <a class="logo">
-      <img class="logo--footer" src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">
+
+    <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276" width="320" height="362" allowfullscreen></iframe>
+
+    <a class="logo__link">
+      <img class="logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
     </a>
+
     <div class="social">
       <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
       <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
       <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
     </div>
+    
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
