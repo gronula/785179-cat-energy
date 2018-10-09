@@ -6,29 +6,45 @@
   padding-bottom: 22px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-top: 1px solid @line-color;
   border-bottom: 1px solid @line-color;
 }
 
 .social__link {
-  width: 22px;
-  height: 19px;
   font-size: 0;
-  margin-left: 18px;
-  margin-right: 18px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  margin-left: 20px;
+  margin-right: 20px;
 
   &--vkontakte {
-    background-image: url("../../img/icon-vk-mobile.svg");
+    width: 22px;
+    height: 12px;
   }
 
   &--facebook {
-    background-image: url("../../img/icon-fb-mobile.svg");
+    width: 10px;
+    height: 19px;
   }
 
   &--instagram {
-    background-image: url("../../img/icon-insta-mobile.svg");
+    width: 16px;
+    height: 16px;
+  }
+
+  g {
+    fill: #666666;
+  }
+
+  &:hover {
+    g {
+      fill: @bg-green;
+    }
+  }
+
+  &:active {
+    g {
+      fill: @bg-green;
+      opacity: 0.3;
+    }
   }
 }
