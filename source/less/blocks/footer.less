@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: @bg-grey;
+}
+
+.footer__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+
+  &--bg-white {
+    background-color: #ffffff;
+  }
+}
+
+.footer__cooperation {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.footer__address {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 20px;
+  color: @text-color;
+  width: 50%;
+}
+
+.footer__map {
+  border: 0;
+  width: 100%;
+  margin-bottom: 35px;
+  background:
+    url("./../img/map-pin.png") no-repeat center,
+    url("./../img/bg-map-mobile@1x.png") no-repeat center;
+  background-size: 55px 53px, cover;
+}
