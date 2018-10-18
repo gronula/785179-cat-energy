@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: -4px;
 }
 
 .form__annotation {
-  margin: 0 20px 32px;
+  margin: 0 20px 37px;
   text-transform: uppercase;
 }
 
 .form__info {
   width: 100%;
   border: 0;
-  margin: 0;
+  margin-left: -1px;
+  margin-right: 0;
+  margin-bottom: 3px;
   padding: 0;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -27,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding-right: 20px;
   text-transform: uppercase;
   font-size: 16px;
@@ -38,11 +41,18 @@
   }
 }
 
+.form__details .form__label {
+  margin-left: -1px;
+}
+
 .form__input {
   flex-grow: 1;
-  margin-left: 15px;
-  min-height: 45px;
-  padding: 12px;
+  margin-left: 14px;
+  margin-top: 2px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 9px;
+  padding-bottom: 10px;
   border: 1px solid rgba(205, 205, 205, 0.5);
   color: @text-color;
   text-transform: uppercase;
@@ -50,6 +60,26 @@
   line-height: 1;
   outline: 0;
   z-index: 1;
+
+  &[id="weight"] {
+    margin-left: 17px;
+    padding-left: 15px;
+  }
+
+  &[id="age"] {
+    margin-left: 16px;
+    padding-left: 15px;
+  }
+
+  &[id="email"] {
+    margin-left: 12px;
+    padding-left: 14px;
+  }
+
+  &[id="phone"] {
+    margin-left: 10px;
+    padding-left: 15px;
+  }
 
   &:hover {
     border-color: #cdcdcd;
@@ -98,8 +128,11 @@
 
 .form__feeding {
   margin: 0;
-  margin-bottom: 25px;
-  padding: 25px 20px;
+  margin-bottom: 29px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 0;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
@@ -143,7 +176,7 @@
 
 .form__details {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   padding: 0;
   padding-left: 20px;
   border: 0;
@@ -157,7 +190,7 @@
 }
 
 .form__icon--email {
-  right: 36px;
+  right: 35px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -167,7 +200,7 @@
 }
 
 .form__icon--phone {
-  right: 33px;
+  right: 32px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -185,8 +218,10 @@
 }
 
 .form__textarea {
-  margin: 0;
-  padding: 15px 13px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 14px;
+  padding-right: 13px;
   width: calc(100% - 20px);
   min-width: 280px;
   min-height: 150px;
@@ -209,7 +244,7 @@
 
 .form__extra {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 41px;
   padding: 0;
   padding-left: 20px;
   border: 0;
@@ -218,7 +253,7 @@
 .form__extra .form__label {
   position: relative;
   padding-left: 46px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   cursor: pointer;
 
   &:last-child {
@@ -256,8 +291,9 @@
 
 .form__legend {
   align-self: center;
-  margin-top: 20px;
+  margin-top: 21px;
   font-family: "Arial", sans-serif;
+  font-size: 14px;
   line-height: 16px;
   color: @text-color;
 }
