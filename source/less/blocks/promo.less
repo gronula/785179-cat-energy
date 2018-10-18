@@ -1,19 +1,19 @@
 .promo {
-  min-height: 480px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 22px;
-  background: url("./../img/index-can-mobile@1x.png") no-repeat center 167px;
+  background: url("../img/index-can-mobile@1x.png") no-repeat center 167px;
 }
 
 .promo__header {
   width: 100%;
-  padding-top: 25px;
+  padding-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
   min-height: 305px;
-  background: url("./../img/index-background-mobile@1x.jpg") no-repeat center 0;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center 0;
   background-size: cover;
   z-index: -1;
   position: relative;
@@ -26,7 +26,7 @@
   color: #ffffff;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   padding: 0;
 }
 
@@ -38,7 +38,6 @@
   color: #ffffff;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
   padding: 0;
 }
 
@@ -46,5 +45,81 @@
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  margin-top: auto;
+  margin-top: 135px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    min-height: 810px;
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat center bottom;
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 0;
+    align-items: stretch;
+  }
+
+  .promo__header {
+    background: none;
+    min-height: auto;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .promo__title {
+    color: @main-color;
+    font-size: 60px;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  .promo__slogan {
+    color: @main-color;
+    font-size: 20px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .promo__wrapper {
+    margin-top: 35px;
+    width: 245px;
+    height: 52px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    min-height: 499px;
+    background: url("../img/index-can-desktop@1x.png") no-repeat 490px top;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .promo__header {
+    margin-top: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 50%;
+  }
+
+  .promo__title {
+    margin-bottom: 41px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 2px;
+  }
+
+  .promo__wrapper {
+    margin-top: 50px;
+    margin-left: 80px;
+  }
 }

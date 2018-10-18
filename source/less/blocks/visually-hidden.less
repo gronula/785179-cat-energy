@@ -1,7 +1,7 @@
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: fixed;
+  position: absolute;
 
   width: 1px;
   height: 1px;
@@ -15,4 +15,8 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.example input[type="radio"].visually-hidden {
+  top: 50%;
 }

@@ -204,7 +204,6 @@
   &:active,
   &:focus {
     border-color: @text-color;
-    outline: 0;
   }
 }
 
@@ -239,8 +238,15 @@
 }
 
 .form__input[type="checkbox"]:checked + .form__label::before {
-  background: url("./../img/icon-tick.svg") no-repeat center;
+  background: url("../img/icon-tick.svg") no-repeat center;
   background-size: 21px 16px;
+}
+
+.form__input[type="radio"]:focus + .form__label::before,
+.form__input[type="checkbox"]:focus + .form__label::before {
+  box-shadow: 0 0 0 2px #ffffff,
+    0 0 0 4px @bg-green;
+  outline: 0;
 }
 
 .form__wrapper {

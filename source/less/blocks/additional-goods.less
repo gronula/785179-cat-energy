@@ -18,7 +18,7 @@
 }
 
 .additional-goods__title {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
@@ -27,21 +27,33 @@
 }
 
 .additional-goods__table {
-  display: flex;
+  // display: flex;
   line-height: 14px;
   color: @text-color;
   font-family: "Arial", sans-serif;
   margin-bottom: 11px;
+  width: 100%;
+  table-layout: fixed;
 
   & tbody {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+    // display: flex;
+    // width: 100%;
+    // flex-direction: column;
   }
 
   & tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
   }
+
+  & td {
+    padding: 0;
+    word-break: break-all;
+    // width: 50%;
+  }
+}
+
+.additional-goods__value {
+  text-align: right;
 }
