@@ -244,8 +244,7 @@
   }
 
   .example__price {
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     margin-top: 9px;
   }
 
@@ -394,7 +393,6 @@
     border-top: 0;
     padding-top: 0;
     flex-direction: row;
-    flex-wrap: wrap;
     background-image: linear-gradient(to right, @bg-grey calc(50% + 325px), #eaeaea calc(50% + 325px));
     background-position-y: 204px;
     background-repeat: no-repeat;
@@ -438,6 +436,8 @@
   }
 
   .example__price {
+    display: inline-block;
+    vertical-align: bottom;
     margin-left: 59px;
     margin-top: -4px;
   }
@@ -467,5 +467,9 @@
     transform: none;
     max-width: none;
     clip: rect(0, 690px, 517px, 365px);
+  }
+
+  .example__switcher {
+    margin-top: 4px;
   }
 }

@@ -1,6 +1,5 @@
 .products__item {
   padding: 0 19px 24px;
-  min-height: 210px;
   margin-top: -1px;
   border: 1px solid #ededed;
   display: flex;
@@ -12,6 +11,7 @@
   width: 50%;
   text-align: center;
   display: flex;
+  margin-bottom: -3px;
 }
 
 .products__image {
@@ -28,7 +28,7 @@
 .products__link {
   text-decoration: none;
   display: flex;
-  width: 70%;
+  width: 65%;
 }
 
 .products__title {
@@ -42,32 +42,17 @@
 }
 
 .products__table {
-  // display: flex;
   font-size: 12px;
   line-height: 16px;
   color: @text-color;
   font-family: "Arial", sans-serif;
-  width: 100%;
+  width: calc(100% + 1px);
   table-layout: fixed;
   border-spacing: 0;
-
-  & tbody {
-    // display: flex;
-    // flex-direction: column;
-    // width: 100%;
-  }
-
-  & tr {
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
-    // width: 100%;
-  }
 
   & td {
     padding: 0;
     word-break: break-all;
-    // width: 50%;
   }
 }
 
@@ -87,23 +72,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 2px;
-    background-color: #d3d3d3;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
     top: 26px;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
+    width: 30px;
     height: 30px;
-    background-color: #d3d3d3;
+    background: url("../img/icon-plus-mobile.svg") no-repeat;
+    opacity: 0.2;
   }
 }
 
@@ -123,4 +98,170 @@
   line-height: 16px;
   color: #444444;
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: @tablet-width) {
+  .products {
+    width: 100%;
+    margin-top: 137px;
+    margin-bottom: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .products__item {
+    position: relative;
+    width: calc(50% - 30px);
+    min-height: 431px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+    margin-bottom: 141px;
+    border: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: @bg-grey;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+
+    &--show-more {
+      padding-top: 0;
+      padding-bottom: 38px;
+      background: none;
+      border: 1px solid rgba(205, 205, 205, 0.5);
+
+      &::before {
+        background: url(" ../img/icon-plus.svg") no-repeat;
+        left: calc(50% + 1px);
+        top: 54px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  .products__wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 305px;
+    left: 0;
+    justify-content: center;
+  }
+
+  .products__image {
+    width: 100%;
+  }
+
+  .products__description {
+    width: 100%;
+    padding-left: 38px;
+    padding-right: 37px;
+    margin-top: 34px;
+    align-items: center;
+
+    &--show-more {
+      margin-bottom: 64px;
+      padding-right: 38px;
+    }
+  }
+
+  .products__link {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .products__title {
+    font-size: 20px;
+    margin-bottom: 19px;
+    text-align: center;
+
+    &--show-more {
+      width: 70%;
+      margin-bottom: 25px;
+    }
+  }
+
+  .products__table {
+    font-size: 16px;
+    margin-bottom: 33px;
+
+    & td {
+      padding-bottom: 7px;
+      padding-top: 8px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  .products__info {
+    width: 90%;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .products__item {
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 144px;
+
+    &:nth-child(even) {
+      margin-right: 40px;
+    }
+
+    &:nth-last-child(-n+4) {
+      margin-bottom: 0;
+    }
+
+    &--show-more::before {
+      left: 50%;
+    }
+  }
+
+  .products__wrapper {
+    bottom: 304px;
+  }
+
+  .products__link {
+    width: 80%;
+  }
+
+  .products__table {
+    & td {
+      padding-left: 1px;
+      padding-right: 3px;
+    }
+  }
+
+  .products__description--show-more {
+    margin-bottom: 86px;
+  }
+
+  .products__title--show-more {
+    width: 100%;
+  }
+
+  .products__info {
+    width: 100%;
+  }
 }

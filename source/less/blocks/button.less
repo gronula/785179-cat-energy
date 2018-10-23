@@ -26,6 +26,7 @@
   &--secondary {
     background-color: @bg-grey;
     color: @text-color;
+    margin-top: 21px;
     cursor: pointer;
 
     &:hover {
@@ -51,5 +52,32 @@
     font-size: 20px;
     line-height: 1;
     padding-left: 16px;
+  }
+
+  .products .button {
+    height: auto;
+    width: calc(100% - 75px);
+  }
+
+  .additional-goods .button {
+    padding-left: 17px;
+  }
+
+  .inner--form .button {
+    font-size: 20px;
+    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-left: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-goods .button {
+    width: 245px;
+    padding-left: 21px;
+  }
+
+  .inner--form .button {
+    padding-left: 22px;
   }
 }

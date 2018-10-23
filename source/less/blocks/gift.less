@@ -31,3 +31,31 @@
   color: #ffffff;
   text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .gift {
+    min-height: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 41px;
+    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center;
+
+    &::after {
+      left: 91px;
+      transform: none;
+    }
+  }
+
+  .gift__info {
+    margin-top: 72px;
+    margin-left: 307px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift {
+    width: calc(25% - 80px);
+    margin-right: auto;
+  }
+}

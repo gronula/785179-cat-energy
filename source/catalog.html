@@ -43,7 +43,11 @@
     <section class="products">
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy PRO 500 грамм с курицей">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png">
+            <img class="products__image" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy PRO 500 грамм с курицей">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -69,7 +73,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 1000 грамм с курицей">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
+            <img class="products__image" src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 1000 грамм с курицей">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -95,7 +103,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 500 грамм с рыбой">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png">
+            <img class="products__image" src="img/fish-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 500 грамм с рыбой">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -121,7 +133,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 1000 грамм с рыбой">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
+            <img class="products__image" src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 1000 грамм с рыбой">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -147,7 +163,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 500 грамм с гречкой">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png">
+            <img class="products__image" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 500 грамм с гречкой">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -173,7 +193,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 1000 грамм с гречкой">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
+            <img class="products__image" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 1000 грамм с гречкой">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -199,7 +223,11 @@
 
       <article class="products__item">
         <a class="products__wrapper" href="#">
-          <img class="products__image" src="img/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 500 грамм с рисом">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png">
+            <img class="products__image" src="img/rice-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Slim 500 грамм с рисом">
+          </picture>
         </a>
         <div class="products__description">
           <a class="products__link" href="#">
@@ -235,54 +263,56 @@
     <section class="additional-goods">
       <h2 class="secondary-title"><span class="secondary-title__wrapper">Дополнительные товары</span></h2>
 
-      <article class="additional-goods__item">
-        <h3 class="additional-goods__title">Сахарозаменитель</h3>
-        <table class="additional-goods__table">
-          <tr>
-            <td class="additional-goods__characteristic">1 упаковка (100 г)</td>
-            <td class="additional-goods__value">100 P.</td>
-          </tr>
-        </table>
-        <a class="button" href="#">Заказать</a>
-      </article>
+      <div class="additional-goods__wrapper">
+        <article class="additional-goods__item">
+          <h3 class="additional-goods__title">Сахарозаменитель</h3>
+          <table class="additional-goods__table">
+            <tr>
+              <td class="additional-goods__characteristic">1 упаковка (100 г)</td>
+              <td class="additional-goods__value">100 P.</td>
+            </tr>
+          </table>
+          <a class="button" href="#">Заказать</a>
+        </article>
 
-      <article class="additional-goods__item">
-        <h3 class="additional-goods__title">Питьевая вода</h3>
-        <table class="additional-goods__table">
-          <tr>
-            <td class="additional-goods__characteristic">5 литров</td>
-            <td class="additional-goods__value">50 P.</td>
-          </tr>
-        </table>
-        <a class="button" href="#">Заказать</a>
-      </article>
+        <article class="additional-goods__item">
+          <h3 class="additional-goods__title">Питьевая вода</h3>
+          <table class="additional-goods__table">
+            <tr>
+              <td class="additional-goods__characteristic">5 литров</td>
+              <td class="additional-goods__value">50 P.</td>
+            </tr>
+          </table>
+          <a class="button" href="#">Заказать</a>
+        </article>
 
-      <article class="additional-goods__item">
-        <h3 class="additional-goods__title">Молоко</h3>
-        <table class="additional-goods__table">
-          <tr>
-            <td class="additional-goods__characteristic">1 литр</td>
-            <td class="additional-goods__value">100 P.</td>
-          </tr>
-        </table>
-        <a class="button" href="#">Заказать</a>
-      </article>
+        <article class="additional-goods__item">
+          <h3 class="additional-goods__title">Молоко</h3>
+          <table class="additional-goods__table">
+            <tr>
+              <td class="additional-goods__characteristic">1 литр</td>
+              <td class="additional-goods__value">100 P.</td>
+            </tr>
+          </table>
+          <a class="button" href="#">Заказать</a>
+        </article>
 
-      <article class="additional-goods__item">
-        <h3 class="additional-goods__title">Витамины</h3>
-        <table class="additional-goods__table">
-          <tr>
-            <td class="additional-goods__characteristic">1 упаковка (30 г)</td>
-            <td class="additional-goods__value">300 P.</td>
-          </tr>
-        </table>
-        <a class="button" href="#">Заказать</a>
-      </article>
+        <article class="additional-goods__item">
+          <h3 class="additional-goods__title">Витамины</h3>
+          <table class="additional-goods__table">
+            <tr>
+              <td class="additional-goods__characteristic">1 упаковка (30 г)</td>
+              <td class="additional-goods__value">300 P.</td>
+            </tr>
+          </table>
+          <a class="button" href="#">Заказать</a>
+        </article>
+      </div>
+
+      <div class="additional-goods__gift">
+        <p class="additional-goods__info">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+      </div>
     </section>
-
-    <div class="gift">
-      <p class="gift__info">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-    </div>
   </main>
 
   <footer class="footer">
@@ -290,7 +320,6 @@
       <h2 class="footer__cooperation">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
       <p class="footer__address">
         ул. Большая Конюшенная, д.&nbsp;19/8
-        <br>
         <span>Санкт-Петербург</span>
       </p>
     </div>
