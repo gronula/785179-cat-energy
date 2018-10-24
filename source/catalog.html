@@ -20,11 +20,11 @@
           <img class="logo__image" src="img/logo-mobile.svg" width="192" height="38" alt="Cat Energy">
         </picture>
       </a>
-      <button class="logo__toggle logo__toggle--closed" type="button">Открыть меню</button>
     </div>
 
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <ul class="main-nav__list">
+    <nav class="main-nav">
+      <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">Открыть меню</button>
+      <ul class="main-nav__list main-nav__list--closed main-nav__list--nojs">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
@@ -329,9 +329,11 @@
       allowfullscreen></iframe>
 
     <div class="footer__wrapper">
-      <a class="logo__link" href="index.html">
-        <img class="logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-      </a>
+      <div class="logo">
+        <a class="logo__link" href="index.html">
+          <img class="logo__image logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+      </div>
 
       <div class="social">
         <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
@@ -395,29 +397,8 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.logo__toggle');
+  <script src="js/script.js"></script>
 
-    navMain.classList.remove('main-nav--nojs');
+  </body>
 
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-
-        navToggle.classList.remove('logo__toggle--closed');
-        navToggle.classList.add('logo__toggle--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-
-        navToggle.classList.add('logo__toggle--closed');
-        navToggle.classList.remove('logo__toggle--opened');
-      }
-    });
-  </script>
-
-</body>
-
-</html>
+  </html>
