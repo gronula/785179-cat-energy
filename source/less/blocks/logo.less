@@ -1,9 +1,10 @@
 .logo {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 11px;
-  padding-bottom: 16px;
+  padding-top: 13px;
+  padding-bottom: 14px;
   padding-left: 20px;
   padding-right: 20px;
   border-bottom: 1px solid #e6e6e6;
@@ -13,6 +14,18 @@
   display: flex;
   justify-content: center;
   align-self: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  picture {
+    display: flex;
+  }
 }
 
 .logo__image {
@@ -20,15 +33,58 @@
 
   &--footer {
     height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 }
 
 .logo__toggle {
-  background-color: transparent;
+  cursor: pointer;
   border: 0;
   font-size: 0;
   width: 24px;
   height: 18px;
-  background-image: url("./../img/icon-mobile-menu.svg");
+  background: transparent url("../img/icon-mobile-menu.svg") no-repeat center;
+
+  &--opened {
+    background: url("../img/icon-close.svg") no-repeat center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    padding: 0;
+    border: 0;
+    width: auto;
+  }
+
+  .logo__image {
+    width: 173px;
+    height: 58px;
+  }
+
+  .logo__toggle {
+    display: none;
+  }
+
+  .footer .logo__link {
+    width: 23%;
+    justify-content: flex-start;
+    align-self: auto;
+    align-items: center;
+  }
+
+  .logo__image--footer {
+    margin-bottom: -3px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer .logo__link {
+    margin-top: -2px;
+  }
+
+  .logo__image {
+    width: 202px;
+    height: 59px;
+  }
 }

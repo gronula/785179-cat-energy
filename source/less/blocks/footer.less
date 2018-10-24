@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 25px 20px;
+  padding-top: 28px;
 
   &--bg-white {
     background-color: #ffffff;
@@ -23,17 +25,20 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 10px;
+  margin-left: -1px;
   width: 50%;
-  margin-right: 10px;
 }
 
 .footer__address {
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  margin-left: 2px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: "Arial", sans-serif;
   line-height: 20px;
   color: @text-color;
@@ -43,9 +48,108 @@
 .footer__map {
   border: 0;
   width: 100%;
-  margin-bottom: 35px;
+  height: 362px;
+  margin-bottom: 40px;
   background:
-    url("./../img/map-pin.png") no-repeat center,
-    url("./../img/bg-map-mobile@1x.png") no-repeat center;
-  background-size: 55px 53px, cover;
+    url("../img/map-pin.png") no-repeat center 140px,
+    url("../img/bg-map-mobile@1x.png") no-repeat center -37px;
+  background-size: 63px 53px, auto;
 }
+
+.footer__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 57px;
+  }
+
+  .footer__contacts {
+    padding-top: 63px;
+    padding-bottom: 58px;
+    padding-left: 74px;
+    padding-right: 72px;
+    width: 100%;
+  }
+
+  .footer__cooperation {
+    width: 160px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .footer__address {
+    width: 160px;
+    text-align: right;
+    font-size: 16px;
+  }
+
+  .footer__address span {
+    margin-top: 20px;
+  }
+
+  .footer__map {
+    height: 396px;
+    background:
+      url("../img/map-pin.png") no-repeat center 146px,
+      url("../img/bg-map-tablet@1x.png") no-repeat center -4px;
+    background-size: 122px 106px, auto;
+    margin-bottom: 53px;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    margin-top: -10px;
+  }
+
+  .footer__contacts {
+    position: absolute;
+    width: 570px;
+    left: calc(50% - 610px);
+    top: 95px;
+    padding-left: 79px;
+    padding-right: 85px;
+    background-color: #ffffff;
+  }
+
+  .footer__address {
+    text-align: left;
+  }
+
+  .footer__map {
+    height: 400px;
+    background:
+      url("../img/map-pin.png") no-repeat calc(50% + 340px) 150px,
+      url("../img/bg-map-desktop@1x.png") no-repeat center;
+  }
+
+  .footer__wrapper {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//   .footer {
+//     width: 1300px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+// }
