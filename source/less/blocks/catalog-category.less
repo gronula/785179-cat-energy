@@ -199,18 +199,19 @@
   .catalog-category {
     width: 1300px;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 135px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 75px;
     padding-left: 40px;
     padding-right: 40px;
   }
 
   .catalog-category__item {
     width: 570px;
-    margin-bottom: 0;
+    margin-bottom: 75px;
 
     &--slim {
       padding-right: 50px;
@@ -250,6 +251,10 @@
       left: 34px;
       right: auto;
       top: 69px;
+    }
+
+    &:last-child {
+      margin-bottom: 75px;
     }
   }
 

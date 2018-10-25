@@ -48,10 +48,12 @@
 
 .additional-goods__characteristic {
   padding: 0;
+  padding-right: 10px;
 }
 
 .additional-goods__value {
   padding: 0;
+  padding-left: 10px;
   text-align: right;
 }
 
@@ -64,6 +66,11 @@
   min-width: 280px;
   min-height: 289px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-size: 280px auto;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
   &::after {
     content: "";
@@ -92,6 +99,8 @@
 @media (min-width: @tablet-width) {
   .additional-goods {
     padding-left: 0;
+    padding-top: 0;
+    margin-top: -68px;
     margin-bottom: 41px;
   }
 
@@ -109,6 +118,7 @@
   }
 
   .additional-goods__title {
+    width: 50%;
     font-size: 20px;
     line-height: 1;
   }
@@ -135,6 +145,11 @@
     padding-right: 30px;
     width: 100%;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center;
+    background-size: 708px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
 
     &::after {
       left: calc(50% - 263px);
@@ -152,7 +167,6 @@
 @media (min-width: @desktop-width) {
   .additional-goods {
     margin-bottom: 60px;
-    padding-top: 36px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -191,22 +205,29 @@
   }
 
   .additional-goods__characteristic {
-    width: 245px;
+    width: 234px;
     text-align: left;
   }
 
   .additional-goods__value {
-    width: 50px;
+    width: auto;
     text-align: left;
   }
 
   .additional-goods__gift {
+    align-self: center;
     width: 325px;
     min-height: 289px;
     margin-top: -1px;
     padding-left: 40px;
     padding-right: 40px;
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat center;
+    background-size: 245px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+
 
     &::after {
       left: 50%;

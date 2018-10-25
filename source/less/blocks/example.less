@@ -71,6 +71,7 @@
   line-height: 20px;
   text-transform: uppercase;
   align-self: center;
+  text-align: center;
 }
 
 .example__wrapper-right {
@@ -199,7 +200,7 @@
 
   .example__result {
     width: calc(70% - 30px);
-    padding-right: 99px;
+    padding-right: 98px;
     margin-left: 30px;
     justify-content: flex-start;
   }
@@ -212,7 +213,6 @@
     margin-right: 42px;
 
     &:last-child {
-      margin-right: 0;
       padding-right: 28px;
     }
   }
@@ -449,8 +449,15 @@
     padding-right: 2px;
   }
 
+  .example__controls {
+    align-self: flex-start;
+    margin-top: 22px;
+  }
+
   .example__image {
     margin-left: -19px;
+    margin-bottom: 8px;
+    align-self: flex-end;
   }
 
   .example__image-before {
@@ -470,6 +477,15 @@
   }
 
   .example__switcher {
-    margin-top: 4px;
+    margin-top: 2px;
+    margin-left: 23px;
+
+    &::before {
+      left: calc(50% + 2px);
+    }
+
+    &::after {
+      left: calc(50% + 2px);
+    }
   }
 }

@@ -493,24 +493,28 @@
   .form__annotation {
     width: 100%;
     margin-left: calc(50% - 610px);
+    margin-bottom: 65px;
     padding-left: 0;
     padding-right: calc(50% + 245px);
   }
 
   .form__info {
+    align-self: center;
     width: 570px;
     margin-left: auto;
     margin-right: 40px;
+    margin-top: -2px;
     padding-left: 1px;
     padding-right: 0;
   }
 
   .form__feeding {
+    align-self: center;
     width: 570px;
     margin-left: 40px;
     margin-right: auto;
     margin-bottom: 76px;
-    margin-top: -1px;
+    margin-top: 1px;
     padding-top: 36px;
     padding-bottom: 35px;
   }
@@ -525,20 +529,32 @@
 
   .form__details {
     display: block;
+    margin-top: -1px;
     margin-bottom: 51px;
   }
 
   .form__details .form__label {
-    width: 609px;
-    margin-left: calc(50% - 609px);
-    margin-top: -4px;
+    width: 569px;
+    margin-top: -3px;
     padding-left: 0;
-    padding-right: 40px;
+    padding-right: 0;
     display: inline-flex;
 
+    &[for="phone"] {
+      margin-left: 35px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:nth-of-type(odd) {
+      width: 574px;
+      margin-left: calc(50% - 609px);
+      margin-right: 40px;
+    }
+
     &:nth-of-type(even) {
-      margin-left: 0;
-      padding-left: 35px;
+      margin-left: 35px;
+      padding-left: 0;
       padding-right: 2px;
     }
   }
@@ -551,8 +567,7 @@
   }
 
   .form__icon--email {
-    right: 60px;
-    margin-top: 1px;
+    right: 20px;
   }
 
   .form__icon--phone {
@@ -578,8 +593,12 @@
     margin-right: 37px;
     margin-left: 0;
 
-    &:first-of-type {
-      margin-left: calc(50% - 610px);
+    &:nth-of-type(4n+1) {
+      margin-left: calc(50% - 611px);
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
     }
 
     &:nth-of-type(even) {
@@ -588,6 +607,7 @@
 
     &:last-child {
       margin-right: -1px;
+      margin-bottom: 55px;
 
       &::before {
         margin-left: -1px;
