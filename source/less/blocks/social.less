@@ -23,37 +23,24 @@
     margin-right: 0;
   }
 
-  &--vkontakte {
-    svg {
-      height: 12px;
-    }
-  }
-
   &--facebook {
     svg {
-      height: 19px;
       margin-left: -6px;
     }
   }
 
-  &--instagram {
-    svg {
-      height: 16px;
-    }
-  }
-
-  g {
+  svg {
     fill: #666666;
   }
 
   &:hover {
-    g {
+    svg {
       fill: @bg-green;
     }
   }
 
   &:active {
-    g {
+    svg {
       fill: @bg-green;
       opacity: 0.3;
     }
@@ -88,15 +75,20 @@
     }
 
     &--vkontakte svg {
+      width: 30px;
       height: 16px;
-    }
-
-    &--facebook svg {
-      height: 28px;
+      margin-left: -2px;
     }
 
     &--instagram svg {
+      width: 23px;
       height: 23px;
+      margin-left: 2px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
     }
   }
 }

@@ -35,6 +35,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  color: #222222;
 
   &:last-child {
     margin-bottom: 0;
@@ -74,11 +75,13 @@
   &[id="email"] {
     margin-left: 12px;
     padding-left: 14px;
+    padding-right: 40px;
   }
 
   &[id="phone"] {
     margin-left: 10px;
     padding-left: 15px;
+    padding-right: 40px;
   }
 
   &:hover {
@@ -89,10 +92,11 @@
   &:focus,
   &:focus + .form__icon {
     border-color: @text-color;
+    fill: @bg-green;
+  }
 
-    path {
-      fill: @bg-green;
-    }
+  &::placeholder {
+    line-height: 1.5;
   }
 
   &::-ms-clear {
@@ -110,10 +114,7 @@
   &:not(:focus):not(:placeholder-shown):invalid,
   &:not(:focus):not(:placeholder-shown):invalid + .form__icon {
     border-color: #ff8282;
-
-    path {
-      fill: #ff8282;
-    }
+    fill: #ff8282;
   }
 
   &:not(:focus):not(:-ms-input-placeholder):invalid,
@@ -201,20 +202,14 @@
   right: 35px;
   top: 50%;
   transform: translateY(-50%);
-
-  & path {
-    fill: #222222;
-  }
+  fill: #222222;
 }
 
 .form__icon--phone {
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
-
-  & path {
-    fill: #222222;
-  }
+  fill: #222222;
 }
 
 .form__comments {
@@ -229,7 +224,7 @@
   padding-top: 12px;
   padding-bottom: 13px;
   padding-left: 14px;
-  padding-right: 13px;
+  padding-right: 11px;
   width: calc(100% - 20px);
   min-width: 280px;
   min-height: 150px;
@@ -239,6 +234,7 @@
   border-color: rgba(#cdcdcd, 0.5);
   color: @text-color;
   resize: none;
+  outline: none;
 
   &:hover {
     border-color: #cdcdcd;
@@ -374,6 +370,7 @@
     padding-top: 9px;
     padding-bottom: 11px;
     padding-left: 18px;
+    padding-right: 18px;
 
     &[id="weight"] {
       margin-left: 20px;
@@ -388,11 +385,13 @@
     &[id="email"] {
       margin-left: 19px;
       padding-left: 20px;
+      padding-right: 55px;
     }
 
     &[id="phone"] {
       margin-left: 16px;
       padding-left: 19px;
+      padding-right: 55px;
     }
   }
 
@@ -581,7 +580,6 @@
   .form__textarea {
     width: 1220px;
     margin-left: calc(50% - 610px);
-    outline: none;
   }
 
   .form__extra {

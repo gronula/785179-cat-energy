@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 22px;
+  margin-top: 21px;
 }
 
 .copyright__link {
@@ -12,7 +13,8 @@
   line-height: 16px;
   color: @text-color;
   text-decoration: none;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.17px;
+  margin-left: -1px;
 
   &:active {
     opacity: 0.3;
@@ -23,24 +25,18 @@
   display: flex;
 
   svg {
-    width: 41px;
-    height: 41px;
-    margin-right: -7px;
-    margin-top: 1px;
-  }
-
-  path {
     fill: #666666;
+    margin-top: 2px;
   }
 
   &:hover {
-    path {
+    svg {
       fill: @bg-green;
     }
   }
 
   &:active {
-    path {
+    svg {
       fill: @bg-green;
       opacity: 0.3;
     }
@@ -49,7 +45,7 @@
 
 @media (min-width: @tablet-width) {
   .copyright {
-    margin-left: 0;
+    margin-top: 0;
     margin-bottom: 0;
     width: 23%;
     justify-content: flex-end;
@@ -57,7 +53,7 @@
   }
 
   .copyright__link {
-    margin-right: 17px;
+    margin-right: 24px;
   }
 }
 
