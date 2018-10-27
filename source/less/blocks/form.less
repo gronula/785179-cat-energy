@@ -35,6 +35,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  color: #222222;
 
   &:last-child {
     margin-bottom: 0;
@@ -74,11 +75,13 @@
   &[id="email"] {
     margin-left: 12px;
     padding-left: 14px;
+    padding-right: 40px;
   }
 
   &[id="phone"] {
     margin-left: 10px;
     padding-left: 15px;
+    padding-right: 40px;
   }
 
   &:hover {
@@ -89,10 +92,11 @@
   &:focus,
   &:focus + .form__icon {
     border-color: @text-color;
+    fill: @bg-green;
+  }
 
-    path {
-      fill: @bg-green;
-    }
+  &::placeholder {
+    line-height: 1.5;
   }
 
   &::-ms-clear {
@@ -110,10 +114,7 @@
   &:not(:focus):not(:placeholder-shown):invalid,
   &:not(:focus):not(:placeholder-shown):invalid + .form__icon {
     border-color: #ff8282;
-
-    path {
-      fill: #ff8282;
-    }
+    fill: #ff8282;
   }
 
   &:not(:focus):not(:-ms-input-placeholder):invalid,
@@ -159,6 +160,14 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
   }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form__input[type="radio"]:checked + .form__label::after {
@@ -193,20 +202,14 @@
   right: 35px;
   top: 50%;
   transform: translateY(-50%);
-
-  & path {
-    fill: #222222;
-  }
+  fill: #222222;
 }
 
 .form__icon--phone {
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
-
-  & path {
-    fill: #222222;
-  }
+  fill: #222222;
 }
 
 .form__comments {
@@ -221,7 +224,7 @@
   padding-top: 12px;
   padding-bottom: 13px;
   padding-left: 14px;
-  padding-right: 13px;
+  padding-right: 11px;
   width: calc(100% - 20px);
   min-width: 280px;
   min-height: 150px;
@@ -231,6 +234,7 @@
   border-color: rgba(#cdcdcd, 0.5);
   color: @text-color;
   resize: none;
+  outline: none;
 
   &:hover {
     border-color: #cdcdcd;
@@ -270,6 +274,14 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form__input[type="checkbox"]:checked + .form__label::before {
@@ -279,7 +291,8 @@
 
 .form__input[type="radio"]:focus + .form__label::before,
 .form__input[type="checkbox"]:focus + .form__label::before {
-  box-shadow: 0 0 0 2px #ffffff,
+  box-shadow:
+    0 0 0 2px #ffffff,
     0 0 0 4px @bg-green;
   outline: 0;
 }
@@ -358,6 +371,7 @@
     padding-top: 9px;
     padding-bottom: 11px;
     padding-left: 18px;
+    padding-right: 18px;
 
     &[id="weight"] {
       margin-left: 20px;
@@ -372,11 +386,13 @@
     &[id="email"] {
       margin-left: 19px;
       padding-left: 20px;
+      padding-right: 55px;
     }
 
     &[id="phone"] {
       margin-left: 16px;
       padding-left: 19px;
+      padding-right: 55px;
     }
   }
 
@@ -477,24 +493,28 @@
   .form__annotation {
     width: 100%;
     margin-left: calc(50% - 610px);
+    margin-bottom: 65px;
     padding-left: 0;
     padding-right: calc(50% + 245px);
   }
 
   .form__info {
+    align-self: center;
     width: 570px;
     margin-left: auto;
     margin-right: 40px;
+    margin-top: -2px;
     padding-left: 1px;
     padding-right: 0;
   }
 
   .form__feeding {
+    align-self: center;
     width: 570px;
     margin-left: 40px;
     margin-right: auto;
     margin-bottom: 76px;
-    margin-top: -1px;
+    margin-top: 1px;
     padding-top: 36px;
     padding-bottom: 35px;
   }
@@ -503,22 +523,38 @@
     margin-top: 1px;
   }
 
+  .form__input[type="radio"]:checked + .form__label::after {
+    margin-top: 1px;
+  }
+
   .form__details {
     display: block;
+    margin-top: -1px;
     margin-bottom: 51px;
   }
 
   .form__details .form__label {
-    width: 609px;
-    margin-left: calc(50% - 609px);
-    margin-top: -4px;
+    width: 569px;
+    margin-top: -3px;
     padding-left: 0;
-    padding-right: 40px;
+    padding-right: 0;
     display: inline-flex;
 
+    &[for="phone"] {
+      margin-left: 35px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:nth-of-type(odd) {
+      width: 574px;
+      margin-left: calc(50% - 609px);
+      margin-right: 40px;
+    }
+
     &:nth-of-type(even) {
-      margin-left: 0;
-      padding-left: 35px;
+      margin-left: 35px;
+      padding-left: 0;
       padding-right: 2px;
     }
   }
@@ -531,8 +567,7 @@
   }
 
   .form__icon--email {
-    right: 60px;
-    margin-top: 1px;
+    right: 20px;
   }
 
   .form__icon--phone {
@@ -557,8 +592,12 @@
     margin-right: 37px;
     margin-left: 0;
 
-    &:first-of-type {
-      margin-left: calc(50% - 610px);
+    &:nth-of-type(4n+1) {
+      margin-left: calc(50% - 611px);
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
     }
 
     &:nth-of-type(even) {
@@ -566,7 +605,8 @@
     }
 
     &:last-child {
-      margin-right: 0;
+      margin-right: -1px;
+      margin-bottom: 55px;
 
       &::before {
         margin-left: -1px;

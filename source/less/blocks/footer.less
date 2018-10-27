@@ -8,6 +8,7 @@
 
 .footer__contacts {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 25px 20px;
@@ -36,7 +37,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 2px;
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Arial", sans-serif;
@@ -53,7 +53,13 @@
   background:
     url("../img/map-pin.png") no-repeat center 140px,
     url("../img/bg-map-mobile@1x.png") no-repeat center -37px;
-  background-size: 63px 53px, auto;
+  background-size: 63px 53px, 320px auto;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image:
+      url("../img/map-pin.png"),
+      url("../img/bg-map-mobile@2x.png");
+  }
 }
 
 .footer__wrapper {
@@ -98,13 +104,20 @@
     background:
       url("../img/map-pin.png") no-repeat center 146px,
       url("../img/bg-map-tablet@1x.png") no-repeat center -4px;
-    background-size: 122px 106px, auto;
+    background-size: 122px 106px, 768px auto;
     margin-bottom: 53px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image:
+        url("../img/map-pin.png"),
+        url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   .footer__wrapper {
     display: flex;
     justify-content: space-between;
+    margin-top: 2px;
     padding-left: 30px;
     padding-right: 30px;
     width: 100%;
@@ -135,6 +148,13 @@
     background:
       url("../img/map-pin.png") no-repeat calc(50% + 340px) 150px,
       url("../img/bg-map-desktop@1x.png") no-repeat center;
+    background-size: 122px 106px, 1440px auto;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image:
+        url("../img/map-pin.png"),
+        url("../img/bg-map-desktop@2x.png");
+    }
   }
 
   .footer__wrapper {
@@ -145,11 +165,3 @@
     padding-right: 40px;
   }
 }
-
-// @media (min-width: @desktop-width) {
-//   .footer {
-//     width: 1300px;
-//     margin-left: auto;
-//     margin-right: auto;
-//   }
-// }
