@@ -11,46 +11,50 @@
   padding: 30px 20px 19px;
   position: relative;
 
-  &--slim::before {
-    content: "";
-    position: absolute;
-    left: 22px;
-    top: 24px;
-    width: 50px;
-    height: 50px;
-    background: @bg-green;
-    border-radius: 50%;
+  &--slim {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 24px;
+      width: 50px;
+      height: 50px;
+      background: @bg-green;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 22px;
+      width: 35px;
+      height: 49px;
+      background: url("../img/icon-cat-slim.svg") no-repeat;
+    }
   }
 
-  &--slim::after {
-    content: "";
-    position: absolute;
-    left: 30px;
-    top: 22px;
-    width: 35px;
-    height: 49px;
-    background: url("../img/icon-cat-slim.svg") no-repeat;
-  }
+  &--pro {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 24px;
+      width: 50px;
+      height: 50px;
+      background: @bg-green;
+      border-radius: 50%;
+    }
 
-  &--pro::before {
-    content: "";
-    position: absolute;
-    left: 22px;
-    top: 24px;
-    width: 50px;
-    height: 50px;
-    background: @bg-green;
-    border-radius: 50%;
-  }
-
-  &--pro::after {
-    content: "";
-    position: absolute;
-    left: 13px;
-    top: 35px;
-    width: 67px;
-    height: 28px;
-    background: url("../img/icon-cat-pro.svg") no-repeat;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 35px;
+      width: 67px;
+      height: 28px;
+      background: url("../img/icon-cat-pro.svg") no-repeat;
+    }
   }
 }
 
@@ -132,42 +136,42 @@
 
     &--slim {
       padding-right: 280px;
+
+      &::before {
+        width: 200px;
+        height: 200px;
+        left: auto;
+        right: 62px;
+        top: 92px;
+      }
+
+      &::after {
+        width: 140px;
+        height: 194px;
+        left: auto;
+        right: 92px;
+        top: 80px;
+      }
     }
 
     &--pro {
       padding-right: 315px;
-    }
 
-    &--slim::before {
-      width: 200px;
-      height: 200px;
-      left: auto;
-      right: 62px;
-      top: 92px;
-    }
+      &::before {
+        width: 200px;
+        height: 200px;
+        left: auto;
+        right: 60px;
+        top: 91px;
+      }
 
-    &--slim::after {
-      width: 140px;
-      height: 194px;
-      left: auto;
-      right: 92px;
-      top: 80px;
-    }
-
-    &--pro::before {
-      width: 200px;
-      height: 200px;
-      left: auto;
-      right: 60px;
-      top: 91px;
-    }
-
-    &--pro::after {
-      width: 268px;
-      height: 112px;
-      left: auto;
-      right: 28px;
-      top: 135px;
+      &::after {
+        width: 268px;
+        height: 112px;
+        left: auto;
+        right: 28px;
+        top: 135px;
+      }
     }
   }
 
@@ -215,42 +219,42 @@
 
     &--slim {
       padding-right: 50px;
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        left: 52px;
+        right: auto;
+        top: 47px;
+      }
+
+      &::after {
+        width: 70px;
+        height: 97px;
+        left: 66px;
+        right: auto;
+        top: 41px;
+      }
     }
 
     &--pro {
       padding-right: 50px;
-    }
 
-    &--slim::before {
-      width: 100px;
-      height: 100px;
-      left: 52px;
-      right: auto;
-      top: 47px;
-    }
+      &::before {
+        width: 100px;
+        height: 100px;
+        left: 52px;
+        right: auto;
+        top: 47px;
+      }
 
-    &--slim::after {
-      width: 70px;
-      height: 97px;
-      left: 66px;
-      right: auto;
-      top: 41px;
-    }
-
-    &--pro::before {
-      width: 100px;
-      height: 100px;
-      left: 52px;
-      right: auto;
-      top: 47px;
-    }
-
-    &--pro::after {
-      width: 134px;
-      height: 56px;
-      left: 34px;
-      right: auto;
-      top: 69px;
+      &::after {
+        width: 134px;
+        height: 56px;
+        left: 34px;
+        right: auto;
+        top: 69px;
+      }
     }
 
     &:last-child {

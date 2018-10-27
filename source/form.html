@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи. Подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -12,17 +14,18 @@
 
   <header class="header">
     <div class="logo">
-      <a class="logo__link" href="index.html">
+      <a class="logo__link" href="index.html" aria-label="Ссылка на главную страницу Cat Energy">
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img class="logo__image" src="img/logo-mobile.svg" width="192" height="38" alt="Cat Energy">
         </picture>
+        Cat Energy
       </a>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button">Открыть меню</button>
+      <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button" aria-label="Кнопка меню">Кнопка меню</button>
       <ul class="main-nav__list main-nav__list--closed main-nav__list--nojs">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -134,52 +137,56 @@
       </p>
     </div>
 
-    <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276"
-      allowfullscreen></iframe>
+    <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.65167424515073!2d30.322852223067702!3d59.93866820270625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538649644276" allowfullscreen></iframe>
 
-      <div class="footer__wrapper">
-        <div class="logo">
-          <a class="logo__link" href="index.html">
-            <img class="logo__image logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-          </a>
-        </div>
-
-        <div class="social">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
-            <svg width="22" height="12">
-              <use xlink:href="img/sprite.svg#icon-vk"></use>
-            </svg>
-            Мы в Вконтакте</a>
-
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank">
-            <svg width="16" height="16">
-              <use xlink:href="img/sprite.svg#icon-insta"></use>
-            </svg>
-            Мы в Инстаграме</a>
-
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
-            <svg width="10" height="19">
-              <use xlink:href="img/sprite.svg#icon-fb"></use>
-            </svg>
-            Мы в Фейсбуке</a>
-        </div>
-
-        <div class="copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <svg width="27" height="34">
-              <use xlink:href="img/sprite.svg#htmlacademy"></use>
-            </svg>
-          </a>
-        </div>
+    <div class="footer__wrapper">
+      <div class="logo">
+        <a class="logo__link" href="index.html" aria-label="Ссылка на главную страницу Cat Energy">
+          <img class="logo__image logo__image--footer" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+          Cat Energy
+        </a>
       </div>
-    </footer>
 
-  <script src="js/script.js"></script>
+      <div class="social">
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" aria-label="Посетите нашу страницу в Вконтакте">
+          <svg width="22" height="12">
+            <use xlink:href="img/sprite.svg#icon-vk"></use>
+          </svg>
+          Мы в Вконтакте
+        </a>
+
+        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" target="_blank" aria-label="Посетите нашу страницу в Инстаграме">
+          <svg width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-insta"></use>
+          </svg>
+          Мы в Инстаграме
+        </a>
+
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Посетите нашу страницу в Фейсбуке">
+          <svg width="10" height="19">
+            <use xlink:href="img/sprite.svg#icon-fb"></use>
+          </svg>
+          Мы в Фейсбуке
+        </a>
+      </div>
+
+      <div class="copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Посетите сайт HTML Academy">
+          <svg width="27" height="34">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
+          Посетите сайт HTML Academy
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
   <script src="js/picturefill.min.js"></script>
-  <script src="js/svg4everybody.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 
-  </body>
+</body>
 
-  </html>
+</html>

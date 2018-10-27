@@ -20,14 +20,14 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-if (window.matchMedia("(min-width: 768px)").matches) {
-  wasLabel.removeAttribute('checked', 'checked');
+if (window.matchMedia('(min-width: 768px)').matches && document.body.contains(wasLabel || nowLabel)) {
+  wasLabel.removeAttribute('checked');
 }
 
 window.addEventListener('resize', function () {
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  if (window.matchMedia('(max-width: 767px)').matches && document.body.contains(wasLabel || nowLabel)) {
     wasLabel.setAttribute('checked', 'checked');
-  } else {
-    wasLabel.removeAttribute('checked', 'checked');
+  } else if (window.matchMedia('(min-width: 768px)').matches && document.body.contains(wasLabel || nowLabel)) {
+    wasLabel.removeAttribute('checked');
   }
 });
