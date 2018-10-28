@@ -61,9 +61,12 @@
   flex-direction: column;
   align-items: center;
   margin-top: 39px;
-  min-width: 280px;
+  width: 280px;
   min-height: 289px;
-  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-color: @bg-green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 280px auto;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -141,8 +144,8 @@
     margin-top: 69px;
     padding-left: 30px;
     padding-right: 30px;
-    width: 100%;
-    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center;
+    width: 708px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px auto;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -214,12 +217,14 @@
 
   .additional-goods__gift {
     align-self: center;
-    width: 325px;
+    width: 245px;
     min-height: 289px;
     margin-top: -1px;
+    margin-left: 40px;
+    margin-right: 40px;
     padding-left: 40px;
     padding-right: 40px;
-    background: url("../img/gift-photo-desktop@1x.jpg") no-repeat center;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: 245px auto;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
